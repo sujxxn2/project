@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 수업</title>
+    <style type="text/css">
+        *{margin:0; padding:0;}
+        .box_group{
+            width:600px;
+            margin-top:50px;
+            margin-left:50px;
+            background-color: blanchedalmond;
+        }
+        .box_group .box{
+            transition:1s;
+            cursor: pointer;
+        }
+        .box_group .box1{
+            width:200px; height:100px; margin-bottom:50px;
+            background-color: rgba(49, 200, 150, 0.717);
+        }
+        .box_group .box1:hover{
+            transform: translate(50px,-5px);
+        }
+        /* transition 부드러운 애니메이션 움직임 */
+        /* translateX(5px), translateY(5px)로도 가능하며, translate(5px,0px)로도 가능함 단위는 px, %, em 등*/
+        .box_group .box2{
+            width:200px; height:100px; margin-bottom:50px;
+            background-color: rgb(41, 99, 80);
+            transform-origin: top left;
+        }
+        /* scale의 기본 중심점은 center이며, 중심점을 변경하고자할때 원본 box2에 transform-origin을 사용함 단위는 0과 양수*/
+        .box_group .box2:hover{
+            transform: scale(1.2);
+        }
+        .box_group .box3{
+            width:200px; height:100px; margin-bottom:50px;
+            background-color: rgba(218, 232, 96, 0.656);
+        }
+        .box_group .box3:hover{
+            transform: skew(-20deg);
+        }
+        /* skew 왜곡, 비틀기 -값도 가능하며 단위는 +/- 각도(deg), 중심점 변경 가능 transform-origin*/
+        .box_group .box4{
+            width:200px; height:100px; margin-bottom:50px;
+            background-color: rgb(235, 210, 64);
+            transform-origin: top left;
+        }
+        .box_group .box4:hover{
+            border-radius:20px;
+            transform: rotate(45deg);
+            background-color: brown;
+        }
+        /* 가운데 중심점으로 45도 회전함 단위는 +/- 각도(deg), 중심점 변경 가능 transform-origin*/
+        .box_group .box5{
+            width:200px; height:100px; margin-bottom:50px;
+            background-color: rgb(146, 38, 50);
+        }
+    </style>
+</head>
+<body>
+    <ul class="gnb">
+        <li>
+            <a href="#">메인메뉴1</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴1-1</a></li>
+                <li><a href="#">서브메뉴1-2</a></li>
+                <li><a href="#">서브메뉴1-3</a></li>
+                <li><a href="#">서브메뉴1-4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메인메뉴2</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴2-1</a></li>
+                <li><a href="#">서브메뉴2-2</a></li>
+                <li><a href="#">서브메뉴2-3</a></li>
+                <li><a href="#">서브메뉴2-4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메인메뉴3</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴3-1</a></li>
+                <li><a href="#">서브메뉴3-2</a></li>
+                <li><a href="#">서브메뉴3-3</a></li>
+                <li><a href="#">서브메뉴3-4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메인메뉴4</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴4-1</a></li>
+                <li><a href="#">서브메뉴4-2</a></li>
+                <li><a href="#">서브메뉴4-3</a></li>
+                <li><a href="#">서브메뉴4-4</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="box_group">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+</body>
+</html>
