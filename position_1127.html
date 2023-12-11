@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 수업</title>
+    <style>
+        *{margin:0; padding:0;}
+
+        .contain{
+            width:600px;
+            height:500px;
+            background-color:#999;
+            position:relative;
+        }
+        .contain .con1{
+            width:150px;
+            height:100px;
+            background-color:#f1e23b;
+            position:relative;
+            left:100px;
+            top:50px;
+        }
+        /* 주변 영향을 주지 않음 */
+        /* 우선적으로 margin값을 사용하며, 영향을 주는 경우 사용 */
+        .contain .con2{
+            width:150px;
+            height:100%;
+            background-color:#174600;
+            position:absolute;
+            bottom:0px;
+            right:0px;
+        }
+        /* 기준점을 부모속성에게 relative를 주어야함 */
+        /* 기준값이 없을 경우 루트값으로 적용됨 */
+        /* 부모속성을 기준값으로 지정했기 때문에 100%값을 주면 부모속성값의 height값이 적용됨 */
+        .contain .con3{
+            width:150px;
+            height:100px;
+            background-color:#192bb6;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="con1"></div>
+        <div class="con2"></div>
+        <div class="con3"></div>
+    </div>
+</body>
+</html>
